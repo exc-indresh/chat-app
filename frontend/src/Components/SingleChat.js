@@ -6,6 +6,7 @@ import { ChatState } from '../Context/ChatProvider'
 import { getSender, getSenderFull } from './Config/ChatLogics'
 import ProfileModal from './mislleneous/ProfileModal'
 import UpdateGroupChatModal from './mislleneous/updateGroupChatModal'
+import VoiceRecorder from './mislleneous/VoiceRecorder'
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
     const { user, selectedChat, setSelectedChat } = ChatState()
@@ -93,6 +94,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
 
     return (
         <>
+            <VoiceRecorder/>
             {selectedChat ? (
                 <>
                     <Text
@@ -114,7 +116,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
                         {(!selectedChat.isGroupChat ? (
                             <>
                                 {getSender(user, selectedChat.users)}
-                                <ProfileModal
+                                <ProfileModal 
                                     user={getSenderFull(user, selectedChat.users)}
                                 />
                             </>
@@ -138,6 +140,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
                         h="100%"
                         borderRadius="lg"
                         overflowY="hidden"
+                    
                     >
                         {loading ? (
                             <Spinner
@@ -172,7 +175,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
 
                 </>
             ) : (
-                // to get socket.io on same page
+           
                 <Box d="flex" alignItems="center" justifyContent="center" h="100%">
                     <Text fontSize="3xl" pb={3} fontFamily="Work sans">
                         Click on a user to start chatting

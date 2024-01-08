@@ -4,6 +4,7 @@ import MyChat from "../Components/mislleneous/MyChat";
 import ChatBox from "../Components/mislleneous/ChatBox";
 import SideDrawer from "../Components/mislleneous/SideDrawer";
 import { useState } from "react";
+import Invitation from "../Components/mislleneous/Invitation"
 
 const ChatPage = () => {
   const [fetchAgain ,setFetchAgain] =  useState(false);
@@ -11,11 +12,12 @@ const ChatPage = () => {
   return (
     <div style={{width:"100%",color:'black'}}>
       {user && <SideDrawer/>}
-
+      <Invitation/>
       <Box display="flex" justifyContent='space-between' width='100%' padding='10px' height='91.5vh' >
         {user && <MyChat fetchAgain={fetchAgain} />}
         {user && <ChatBox fetchAgain={fetchAgain} setFetchAgain={setFetchAgain}/>}
       </Box>
+       
     </div>
   )
 }

@@ -69,7 +69,7 @@ const Signup = () => {
             toast({
                 title: 'Please fill all the required (*) field.',
                 status: 'warning',
-                duration: 5000,
+                duration: 1000,
                 isClosable: true,
                 position:'bottom',
               })
@@ -81,7 +81,7 @@ const Signup = () => {
             toast({
                 title: 'Please fill all the required (*) field.',
                 status: 'warning',
-                duration: 5000,
+                duration: 1000,
                 isClosable: true,
                 position:'bottom',
               })
@@ -98,7 +98,7 @@ const Signup = () => {
             toast({
                 title: 'Registration Successful.',
                 status: 'success',
-                duration: 5000,
+                duration: 1000,
                 isClosable: true,
                 position:'bottom',
               })
@@ -112,7 +112,7 @@ const Signup = () => {
                 title: 'Error Occured.',
                 description:error.reponse.data.message,
                 status: 'warning',
-                duration: 5000,
+                duration: 1000,
                 isClosable: true,
                 position:'bottom',
               })

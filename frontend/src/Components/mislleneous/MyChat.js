@@ -51,7 +51,7 @@ const MyChat = ({fetchAgain}) => {
       flexDir="column"
       alignItems="center"
       p={3}
-      bg="white"
+      bg="gray"
       w={{ base: "100%", md: "31%" }}
       borderRadius="lg"
       borderWidth="1px"
@@ -66,7 +66,8 @@ const MyChat = ({fetchAgain}) => {
         w="100%"
         justifyContent="space-between"
         alignItems="center"
-        color={'black'}
+        color={'white'}
+        fontWeight='bold'
       >
         My Chats
         <GroupChatModal>
@@ -84,7 +85,6 @@ const MyChat = ({fetchAgain}) => {
         d="flex"
         flexDir="column"
         p={3}
-        bg="#F8F8F8"
         w="100%"
         h="100%"
         borderRadius="lg"

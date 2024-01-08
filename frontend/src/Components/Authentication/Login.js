@@ -23,7 +23,7 @@ const Login = () => {
             toast({
                 title: "Please Fill all the Feilds",
                 status: "warning",
-                duration: 5000,
+                duration: 2000,
                 isClosable: true,
                 position: "bottom",
             });
@@ -49,7 +49,7 @@ const Login = () => {
             toast({
                 title: "Login Successful",
                 status: "success",
-                duration: 5000,
+                duration: 2000,
                 isClosable: true,
                 position: "bottom",
             });
@@ -62,7 +62,7 @@ const Login = () => {
                     title: "Error Occurred!",
                     description: error.response.data.message,
                     status: "error",
-                    duration: 5000,
+                    duration: 2000,
                     isClosable: true,
                     position: "bottom",
                 });
@@ -71,7 +71,7 @@ const Login = () => {
                     title: "Error Occurred!",
                     description: "An unexpected error occurred.",
                     status: "error",
-                    duration: 5000,
+                    duration: 2000,
                     isClosable: true,
                     position: "bottom",
                 });

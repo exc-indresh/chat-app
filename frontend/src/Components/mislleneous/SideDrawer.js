@@ -93,10 +93,10 @@ const SideDrawer = () => {
 
     return (
         <>
-            <Box display="flex" justifyContent="space-between" alignItems="center" bg="white" w="100%" p="5px 10px 5px 10px" borderWidth="5px">
-                <Tooltip label='Search User to Chat' hasArrow placement='bottom-end'>
-                    <Button variant='ghost'><i className='fas fa-search'></i>
-                        <Text display={{ base: 'none', md: 'flex' }} px='4' color='black' onClick={onOpen}>Search User</Text>
+            <Box display="flex" justifyContent="space-between" alignItems="center" bg="gray" w="100%" p="5px 10px 5px 10px" borderWidth="5px">
+                <Tooltip label='Search User to Chat' hasArrow placement='bottom-end' >
+                    <Button variant='ghost' bg="white"><i className='fas fa-search'></i>
+                        <Text display={{ base: 'none', md: 'flex' }} px='4'  color='black' onClick={onOpen}>Search User</Text>
                     </Button>
                 </Tooltip>
                 <Text fontSize="2xl" fontFamily="Work sans">
